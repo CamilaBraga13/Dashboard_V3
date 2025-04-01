@@ -12,18 +12,7 @@ function Chart({ data }) {
             if (data.length > 0) {
                 console.log("Chaves disponíveis:", Object.keys(data[0]));
             }
-    
-            // const formattedData = data.map(row => {
-            //     //const dia = parseFloat(row["Id"]);
-            //     //const speed = parseFloat(row["Speed"]);
-                
-            //     row["id"],  // x
-            //     parseFloat(row["ws100"])    // y
 
-            //     //console.log("Dia:", row["Dia"], "->", dia, "| Speed:", row["Speed"], "->", speed);
-    
-            //     //return [dia, speed];
-            // }).filter(row => row[0] && !isNaN(row[1]));
             const formattedData = data.map(row => [ 
                 row["id"],  // x
                 parseFloat(row["wdir100"])    // y
